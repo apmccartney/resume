@@ -1,0 +1,156 @@
+\documentclass[legalpaper]{article}
+\usepackage[utf8]{inputenc}            % A package that expands the character set to UTF-8
+\usepackage[english]{babel}            % A package that describes the language use for latex commands
+\usepackage[margin=1.0cm]{geometry}    % A package which adjusts the page margins to 1.5 cm
+\usepackage{sectsty}                   % A package which allows a user to edit the section heading properties
+\usepackage{hyperref}                  % A package for embedding hypertext links
+\usepackage{enumitem}
+\usepackage{framed, color}
+\usepackage{multicol}
+\usepackage{mdwlist}
+\usepackage{amssymb}
+
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+%\setlist[itemize]{topsep=0pt}
+\renewcommand{\labelitemi}{\tiny$\blacksquare$}
+\definecolor{shadecolor}{rgb}{0.035,0.361, 0.453}
+
+\begin{document}
+\setlength\multicolsep{0pt}
+\pagestyle{empty}
+
+\begin{center}
+  {\Large \textbf{Austin McCartney}\\}
+  3200 Canyon RD Apartment 1104 $\vert$ Los Alamos, NM $\vert$ +1-352-354-2756 $\vert$ austin.p.mccartney@gmail.com
+\end{center}
+
+\begin{center}
+  \begin{shaded}
+    { \color{white} \textbf{EXPERIENCE}}
+  \end{shaded}
+\end{center}
+
+\textbf{Post-Master's Appointment}\\
+Los Alamos National Laboratory \hfill May 2015 - Present\\
+~\\
+Contributed to the development of a number of software products for use in nuclear data processing. I am responsible for the design and implementation of
+
+\begin{itemize}[noitemsep, before={\vspace*{-0.5\baselineskip}}]
+\item the ACEtk C++ library.
+\item the NJOY21 driver and CLI (implemented in C++).
+\item C++/Fortran hooks to legacy NJOY.
+\item a collection of reusable CMake scripts supporting arbitrary composition of component-based libraries.
+\item a python script to provide rudimentary dependency management for NJOY21 component libraries.
+\end{itemize}
+
+Beyond my individual efforts, I have collaborated on the OOAD and implementation of the nuclearData C++ framework and ENDFtk, GNDtk, and NDItk libraries.
+In addition, I participated in and contributed to the refactor of the RTran discrete ordinates neutron transport program, an effort that achieved a factor of 300 speed up on problems of interest.
+\begin{center}
+  \begin{shaded}
+    { \color{white} \textbf{EDUCATION}}
+  \end{shaded}
+\end{center}
+\textbf{Georgia Institute of Technology} (Atlanta, GA)\hrule \vspace{1mm}
+
+Master of Science in Nuclear Engineering \hfill August 2013 - May 2015\\
+\vspace{\baselineskip} %~\\
+~~~Program Highlights
+\begin{itemize}[topsep=0pt, before={\vspace*{-0.5\baselineskip}}]%[topsep=-20pt]%[nolistsep]
+\item High-Performance Computing: Tools and Applications\\
+  Course projects revolved around parallel programming models (Cilk Plus, OpenMP, MPI, Nvidia Cuda, and SIMD Compiler Intrinsics) and tools for analyzing and tuning performance, parallelism, and memory access.
+
+  As a final project, developed a sparse matrix storage scheme for matrices resulting from finite difference discretization of PDEs to achieve high throughput memory access during matrix-vector multiplication operations on Nvidia GPGPUs.
+
+\item Reactor Physics\\
+  This course emphasized the implementation of solution methods for systems of linear differential equations in C and Fortran.
+  As a course project, developed a finite difference 3-dimensional, multigroup neutron diffusion code in Fortran 95.
+
+\item Finite Element Method: Theory and Practice\\
+  Provided an in-depth understanding of the theory and formulation of various finite elements with an emphasis on application to mechanical engineering.
+  ANSYS finite element software was taught as part of the lab practicum.
+
+\end{itemize}
+~\\
+\textbf{University of Florida} (Gainesville, FL) \hrule \vspace{1mm}
+Bachelor of Science in Nuclear Engineering \hfill January 2009 - December 2011\\
+\vspace{\baselineskip} %~\\
+~~~Program Highlights
+\begin{itemize}[topsep=0pt, before={\vspace*{-0.5\baselineskip}}]%[noitemsep,nolistsep]
+\item Special Problems\\
+  Conducted fluid mechanics research under the supervision of Dr.\@ DuWayne Schubring.
+  Developed a statistical model in MATLAB describing the relationships between quantities of interest in disturbance waves in vertical annular two phase flow.
+\end{itemize}
+~\\
+%\textbf{College of Central Florida} (Ocala, FL) \hrule
+%Associate of the Arts in Mathematics \hfill August 2007 - December 2008\\
+%~\\
+\textbf{Independent Coursework}\hrule \vspace{1mm}
+\textbf{Udacity}
+\begin{multicols}{2}
+  \begin{itemize}[noitemsep,nolistsep]
+    \renewcommand{\labelitemi}{\tiny$\blacksquare$}
+  \item Data Analysis with R
+  \item Differential Equations in Action
+  \item Introduction to Computer Science
+  \item Introduction to Data Science
+  \item Introduction to Parallel Programming
+  \item Version Control for Code
+  \end{itemize}
+\end{multicols}
+\vspace{\baselineskip} %~\\
+\textbf{Coursera}
+
+\begin{itemize}[noitemsep,nolistsep]
+
+\item Johns Hopkins University
+  \begin{multicols}{2}
+    \begin{description*}
+      \renewcommand{\labelitemi}{\tiny$\blacksquare$}
+    \item[] Computing for Data Analysis
+    \item[] Getting and Cleaning Data
+    \item[] R Programming
+    \item[] The Data Scientist's Toolbox
+    \end{description*}
+  \end{multicols}
+  
+  \vspace{2mm}
+  
+  \begin{multicols}{2}
+  \item Rice University\\
+    Introduction to Interactive Programming in Python
+  \item University of Illinois at Urbana–Champaign\\
+    Heterogeneous Parallel Programming
+  \end{multicols}
+
+\end{itemize}
+\vspace{\baselineskip} %~\\
+\textbf{National Energy Research Scientific Computing Center}
+\begin{itemize}[noitemsep,nolistsep]
+\item Object-Oriented Programming in Fortran 2003
+\end{itemize}
+
+\begin{center}
+  \begin{shaded}
+    { \color{white} \textbf{ TECHNICAL SKILLS}}
+  \end{shaded}
+\end{center}
+\begin{tabular}{l p{5in}}
+  ~\textbf{Computer Programming}: &  C, C++, Fortran (90/95, 2003/08), Java, Rust,\\
+  & Python (2.7/3.4), R, MATLAB/Octave, Bash\\
+  \rule{0pt}{4ex} \textbf{Parallel Platforms}:   &  NVidia CUDA, MPI, OpenMP, Cilk Plus\\
+  \rule{0pt}{4ex} \textbf{Software Development Tools}:    &  Git, CMake, Catch Unit Testing Framework, Gcov Test Coverage Tool\\
+  & Valgrind Dynamic Analysis Framework, Doxygen Documentation Generator\\
+  \rule{0pt}{4ex} \textbf{Operating Systems}:    &  Linux, OSX, Windows\\
+  \rule{0pt}{4ex} \textbf{Miscellaneous}:        &  UML, Markdown, \LaTeX, Microsoft Office Suite\\
+\end{tabular}
+
+
+
+%\end{framed}
+\end{document}
+
+%sagemathcloud={``zoom_width'':100}
