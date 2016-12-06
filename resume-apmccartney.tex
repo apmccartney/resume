@@ -2,7 +2,7 @@
 \usepackage{standalone}
 \usepackage[utf8]{inputenc}            % A package that expands the character set to UTF-8
 \usepackage[english]{babel}            % A package that describes the language use for latex commands
-\usepackage[margin=1.0cm]{geometry}    % A package which adjusts the page margins to 1.5 cm
+\usepackage[margin=1.0cm, paperheight=320.4mm]{geometry}    % A package which adjusts the page margins to 1.5 cm
 \usepackage{sectsty}                   % A package which allows a user to edit the section heading properties
 \usepackage{hyperref}                  % A package for embedding hypertext links
 \usepackage{enumitem}
@@ -19,6 +19,7 @@
 %\setlist[itemize]{topsep=0pt}
 \renewcommand{\labelitemi}{\tiny$\blacksquare$}
 \definecolor{shadecolor}{rgb}{0.035,0.361, 0.453}
+\hypersetup{urlcolor=shadecolor, colorlinks=true}
 
 \begin{document}
 \setlength\multicolsep{0pt}
@@ -28,7 +29,6 @@
   {\Large \textbf{Austin McCartney}\\}
   3200 Canyon RD Apartment 1104 $\vert$ Los Alamos, NM $\vert$ +1-352-354-2756 $\vert$ austin.p.mccartney@gmail.com
 \end{center}
-
 \begin{center}
   \begin{shaded}
     { \color{white} \textbf{EXPERIENCE}}
@@ -38,33 +38,25 @@
 \textbf{Post-Master's Appointment}\\
 Los Alamos National Laboratory \hfill May 2015 - Present\\
 ~\\
-During my appointment, I contributed to and developed several software products related to nuclear science, including 
-\medskip
+During my tenure at LANL, I was responsible for
 \begin{itemize}[noitemsep, before={\vspace*{-0.5\baselineskip}}]
-\item the NJOY21 driver and command line interface.
-\item C++ hooks to NJOY2012 Fortran routines.
-\item the ACEtk C++ library.
-\item functionality to collapse multigroup neutron and photon data using user-specified group weights in the NDI C99 code
-\item a collection of reusable CMake scripts supporting arbitrary composition and configuration of component-based libraries.
-\item a python script providing dependency management for NJOY21 component libraries.
+\item implementing interoperability between C/C++ client code and Fortran nuclear data processing routines.
+\item extension and release-management of the Nuclear Data Interface C99 library.
+\item implementing the \href{https://github.com/njoy/metaconfigure}{Metaconfigure} dependency and build management software.
+\item implementing the \href{https://github.com/njoy/disco}{Disco} metaprogramming library, providing an EDSL for Fortran-compliant fixed-width text parsing.
+\item implementing the \href{https://github.com/njoy/DimensionalAnalysis}{Dimwits} metaprogramming library, providing compile-time dimensional analysis and unit awareness.
 \end{itemize}
 
-As part of the migration of NJOY21 component libraries to GitHub, I have implemented
+I have lead efforts release a number of component libraries via \href{https://github.com/njoy}{GitHub}. As part of this effort, I have implemented
 \medskip
 \begin{itemize}[noitemsep, before={\vspace*{-0.5\baselineskip}}]
-\item automated continuous integration on Linux and OSX platforms using the TravisCI service.
-\item automated test coverage evaluation and monitering using the Gcov tool and the Coveralls Service.
-\item integration to the Coverity static analysis suite.
+\item automated continuous integration on Linux and OSX platforms using the \href{https://travis-ci.org/njoy}{TravisCI} service.
+\item automated test coverage evaluation and monitering using Gcov and the Coveralls Service.
+\item automated dynamic analysis using the Clang sanatizers.
+\item regular static analysis using the Coverity static analysis suite.
 \end{itemize}
 
-My collaborations during this time include
-\medskip
-\begin{itemize}[noitemsep, before={\vspace*{-0.5\baselineskip}}]
-\item a refactor of the RTran discrete ordinates neutron transport program, achieving a 300x speed up on problems of interest
-\item several components to the Charged Particle Tools (CPT) library.
-\end{itemize}
-
-Recently, I was one of six named as a LANL 2016 Distinguished Student.
+I was one of six named as a LANL Distinguished Student in 2016 and was a 2016 Employee Spotlight award recipient.
 
 \begin{center}
   \begin{shaded}
@@ -85,22 +77,10 @@ Master of Science in Nuclear Engineering \hfill August 2013 - May 2015\\
 \item Reactor Physics\\
   This course emphasized the implementation of solution methods for systems of linear differential equations in C and Fortran.
   As a course project, developed a finite difference 3-dimensional, multigroup neutron diffusion code in Fortran 95.
-
-\item Finite Element Method: Theory and Practice\\
-  Provided an in-depth understanding of the theory and formulation of various finite elements with an emphasis on application to mechanical engineering.
-  ANSYS finite element software was taught as part of the lab practicum.
-
 \end{itemize}
 ~\\
 \textbf{University of Florida} (Gainesville, FL) \hrule \vspace{1mm}
 Bachelor of Science in Nuclear Engineering \hfill January 2009 - December 2011\\
-\vspace{\baselineskip} %~\\
-~~~Program Highlights
-\begin{itemize}[topsep=0pt, before={\vspace*{-0.5\baselineskip}}]%[noitemsep,nolistsep]
-\item Special Problems\\
-  Conducted fluid mechanics research under the supervision of Dr.\@ DuWayne Schubring.
-  Developed a statistical model in MATLAB describing the relationships between quantities of interest in disturbance waves in vertical annular two phase flow.
-\end{itemize}
 ~\\
 %\textbf{College of Central Florida} (Ocala, FL) \hrule
 %Associate of the Arts in Mathematics \hfill August 2007 - December 2008\\
@@ -159,8 +139,8 @@ Bachelor of Science in Nuclear Engineering \hfill January 2009 - December 2011\\
   ~\textbf{Computer Programming}: &  C (99), C++ (03, 11, 14), Fortran (90/95, 2003/08), Python (2.7, 3.4),\\
   & Java, Rust, R, MATLAB/Octave, Bash\\
   \rule{0pt}{4ex} \textbf{Parallel Platforms}:   &  Nvidia CUDA, MPI, OpenMP, Cilk Plus\\
-  \rule{0pt}{4ex} \textbf{Software Development Tools}:    &  Git, CMake, Catch Unit Testing Framework, Gcov Test Coverage Tool,\\
-  & Valgrind Dynamic Analysis Framework, Doxygen Documentation Generator\\
+  \rule{0pt}{4ex} \textbf{Software Development Tools}:    &  Git, CMake, Gcov Test Coverage Tool, Valgrind Dynamic Analysis Framework\\
+  & Perf Performance Profiling Tool, Doxygen Documentation Generator\\
   \rule{0pt}{4ex} \textbf{Operating Systems}:    &  Linux, OSX, Windows\\
   \rule{0pt}{4ex} \textbf{Miscellaneous}:        &  UML, Markdown, \LaTeX, Microsoft Office Suite\\
 \end{tabular}
