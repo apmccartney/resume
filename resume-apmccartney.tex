@@ -1,4 +1,5 @@
 \documentclass[legalpaper]{article}
+\usepackage{standalone}
 \usepackage[utf8]{inputenc}            % A package that expands the character set to UTF-8
 \usepackage[english]{babel}            % A package that describes the language use for latex commands
 \usepackage[margin=1.0cm]{geometry}    % A package which adjusts the page margins to 1.5 cm
@@ -37,18 +38,34 @@
 \textbf{Post-Master's Appointment}\\
 Los Alamos National Laboratory \hfill May 2015 - Present\\
 ~\\
-Contributed to the development of a number of software products for use in nuclear data processing. I am responsible for the design and implementation of
-
+During my appointment, I contributed to and developed several software products related to nuclear science, including 
+\medskip
 \begin{itemize}[noitemsep, before={\vspace*{-0.5\baselineskip}}]
+\item the NJOY21 driver and command line interface.
+\item C++ hooks to NJOY2012 Fortran routines.
 \item the ACEtk C++ library.
-\item the NJOY21 driver and CLI (implemented in C++).
-\item C++/Fortran hooks to legacy NJOY.
-\item a collection of reusable CMake scripts supporting arbitrary composition of component-based libraries.
-\item a python script to provide rudimentary dependency management for NJOY21 component libraries.
+\item functionality to collapse multigroup neutron and photon data using user-specified group weights in the NDI C99 code
+\item a collection of reusable CMake scripts supporting arbitrary composition and configuration of component-based libraries.
+\item a python script providing dependency management for NJOY21 component libraries.
 \end{itemize}
 
-Beyond my individual efforts, I have collaborated on the OOAD and implementation of the nuclearData C++ framework and ENDFtk, GNDtk, and NDItk libraries.
-In addition, I participated in and contributed to the refactor of the RTran discrete ordinates neutron transport program, an effort that achieved a factor of 300 speed up on problems of interest.
+As part of the migration of NJOY21 component libraries to GitHub, I have implemented
+\medskip
+\begin{itemize}[noitemsep, before={\vspace*{-0.5\baselineskip}}]
+\item automated continuous integration on Linux and OSX platforms using the TravisCI service.
+\item automated test coverage evaluation and monitering using the Gcov tool and the Coveralls Service.
+\item integration to the Coverity static analysis suite.
+\end{itemize}
+
+My collaborations during this time include
+\medskip
+\begin{itemize}[noitemsep, before={\vspace*{-0.5\baselineskip}}]
+\item a refactor of the RTran discrete ordinates neutron transport program, achieving a 300x speed up on problems of interest
+\item several components to the Charged Particle Tools (CPT) library.
+\end{itemize}
+
+Recently, I was one of six named as a LANL 2016 Distinguished Student.
+
 \begin{center}
   \begin{shaded}
     { \color{white} \textbf{EDUCATION}}
@@ -61,7 +78,7 @@ Master of Science in Nuclear Engineering \hfill August 2013 - May 2015\\
 ~~~Program Highlights
 \begin{itemize}[topsep=0pt, before={\vspace*{-0.5\baselineskip}}]%[topsep=-20pt]%[nolistsep]
 \item High-Performance Computing: Tools and Applications\\
-  Course projects revolved around parallel programming models (Cilk Plus, OpenMP, MPI, Nvidia Cuda, and SIMD Compiler Intrinsics) and tools for analyzing and tuning performance, parallelism, and memory access.
+  Course projects revolved around parallel programming models (Cilk Plus, OpenMP, MPI, Nvidia CUDA, and SIMD Compiler Intrinsics) and tools for analyzing and tuning performance, parallelism, and memory access.
 
   As a final project, developed a sparse matrix storage scheme for matrices resulting from finite difference discretization of PDEs to achieve high throughput memory access during matrix-vector multiplication operations on Nvidia GPGPUs.
 
@@ -89,18 +106,18 @@ Bachelor of Science in Nuclear Engineering \hfill January 2009 - December 2011\\
 %Associate of the Arts in Mathematics \hfill August 2007 - December 2008\\
 %~\\
 \textbf{Independent Coursework}\hrule \vspace{1mm}
-\textbf{Udacity}
-\begin{multicols}{2}
-  \begin{itemize}[noitemsep,nolistsep]
-    \renewcommand{\labelitemi}{\tiny$\blacksquare$}
-  \item Data Analysis with R
-  \item Differential Equations in Action
-  \item Introduction to Computer Science
-  \item Introduction to Data Science
-  \item Introduction to Parallel Programming
-  \item Version Control for Code
-  \end{itemize}
-\end{multicols}
+% \textbf{Udacity}
+% \begin{multicols}{2}
+%   \begin{itemize}[noitemsep,nolistsep]
+%     \renewcommand{\labelitemi}{\tiny$\blacksquare$}
+%   \item Data Analysis with R
+%   \item Differential Equations in Action
+%   \item Introduction to Computer Science
+%   \item Introduction to Data Science
+%   \item Introduction to Parallel Programming
+%   \item Version Control for Code
+%   \end{itemize}
+% \end{multicols}
 \vspace{\baselineskip} %~\\
 \textbf{Coursera}
 
@@ -139,10 +156,10 @@ Bachelor of Science in Nuclear Engineering \hfill January 2009 - December 2011\\
   \end{shaded}
 \end{center}
 \begin{tabular}{l p{5in}}
-  ~\textbf{Computer Programming}: &  C, C++, Fortran (90/95, 2003/08), Java, Rust,\\
-  & Python (2.7/3.4), R, MATLAB/Octave, Bash\\
-  \rule{0pt}{4ex} \textbf{Parallel Platforms}:   &  NVidia CUDA, MPI, OpenMP, Cilk Plus\\
-  \rule{0pt}{4ex} \textbf{Software Development Tools}:    &  Git, CMake, Catch Unit Testing Framework, Gcov Test Coverage Tool\\
+  ~\textbf{Computer Programming}: &  C (99), C++ (03, 11, 14), Fortran (90/95, 2003/08), Python (2.7, 3.4),\\
+  & Java, Rust, R, MATLAB/Octave, Bash\\
+  \rule{0pt}{4ex} \textbf{Parallel Platforms}:   &  Nvidia CUDA, MPI, OpenMP, Cilk Plus\\
+  \rule{0pt}{4ex} \textbf{Software Development Tools}:    &  Git, CMake, Catch Unit Testing Framework, Gcov Test Coverage Tool,\\
   & Valgrind Dynamic Analysis Framework, Doxygen Documentation Generator\\
   \rule{0pt}{4ex} \textbf{Operating Systems}:    &  Linux, OSX, Windows\\
   \rule{0pt}{4ex} \textbf{Miscellaneous}:        &  UML, Markdown, \LaTeX, Microsoft Office Suite\\
@@ -154,3 +171,8 @@ Bachelor of Science in Nuclear Engineering \hfill January 2009 - December 2011\\
 \end{document}
 
 %sagemathcloud={``zoom_width'':100}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
